@@ -1,11 +1,12 @@
 import React from 'react';
+import "./App.css"
 import DarkMode from "./components/DarkMode"
 import PlayerCard from "./components/PlayerCard"
 import axios from "axios"
 import './App.css';
-import { response } from 'express';
 
-class App extends React.Component() {
+
+class App extends React.Component {
   constructor(){
     super();
     this.state = {
@@ -26,7 +27,7 @@ class App extends React.Component() {
     <div className="App">
       <header className="App-header">
         <DarkMode />
-        <PlayerCard /> 
+        <PlayerCard data={this.state.data}/> 
       </header>
     </div>
   );
